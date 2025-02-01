@@ -7,7 +7,7 @@ import { useContext } from 'react';
 
 export default function Productdisplay(props) {
     const {product} = props;
-    const {addToCart,re} = useContext(Shopcontext);
+    const {addToCart} = useContext(Shopcontext);
   return (
     <div className='productdisplay'>
        <div className='productdisplay-left'>
