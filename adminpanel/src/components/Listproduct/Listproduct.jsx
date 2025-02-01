@@ -4,7 +4,7 @@ import remove_icon from'../../Assets/Admin_Assets/cross_icon.png'
 export default function Listproduct() {
   const [allproducts,setAllproducts] =useState([]);
   const fetchInfo=async()=>{
-      await fetch("http://localhost:4000/allproducts")
+      await fetch("https://e-commerce-backend-91i0.onrender.com/allproducts")
       .then((res)=>res.json())
       .then((data)=>{setAllproducts(data)})
   }
@@ -12,7 +12,7 @@ export default function Listproduct() {
     fetchInfo();
   },[])
   const removeProduct = async(id)=>{
-    await fetch("http://localhost:4000/deleteproduct",{
+    await fetch("https://e-commerce-backend-91i0.onrender.com/deleteproduct",{
        method:"POST",
        headers:{
           Accept:'application/json',

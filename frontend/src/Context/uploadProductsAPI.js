@@ -10,7 +10,7 @@ const uploadAllProducts = async (products, images) => {
     });
 
     try {
-        const response = await fetch("http://localhost:4000/addall", {
+        const response = await fetch("https://e-commerce-backend-91i0.onrender.com/addall", {
             method: "POST",
             body: formData,
         });
