@@ -8,17 +8,18 @@ import { useContext } from 'react';
 export default function Productdisplay(props) {
     const {product} = props;
     const {addToCart} = useContext(Shopcontext);
+    const updatedImageUrl = props.image.replace('http://localhost:4000/images/', 'https://e-commerce-backend-91i0.onrender.com/images/');  
   return (
     <div className='productdisplay'>
        <div className='productdisplay-left'>
           <div className="productdisplay-img-list">
-             <img src={product.image} alt="" />
-             <img src={product.image} alt="" />
-             <img src={product.image} alt="" />
-             <img src={product.image} alt="" />
+             <img src={updatedImageUrl} alt="" />
+             <img src={updatedImageUrl} alt="" />
+             <img src={updatedImageUrl} alt="" />
+             <img src={updatedImageUrl} alt="" />
           </div>
           <div className="productdisplay-image">
-            <img className='productdisplay-main-img' src={product.image} alt="" />
+            <img className='productdisplay-main-img' src={updatedImageUrl} alt="" />
           </div>
        </div>
        <div className="productdisplay-right">
