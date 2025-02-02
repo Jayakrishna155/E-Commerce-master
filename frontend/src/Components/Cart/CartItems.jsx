@@ -19,10 +19,11 @@ export default function CartItems() {
       <hr />
       {Allproducts.map((items) => {
         if (cartItems[items.id] > 0) {
+          const updatedImageUrl = items.image.replace('http://localhost:4000/images/', 'https://e-commerce-backend-91i0.onrender.com/images/');
           return (
             <div key={items.id}>
               <div className='cartitems-format cartitems-format-main'>
-                <img src={items.image} alt="Product" className='cart-product-icon' />
+                <img src={updatedImageUrl} alt="Product" className='cart-product-icon' />
                 <p>{items.name}</p>
                 <p>${items.new_price}</p>
                 <div className="cartitems-quantity-control">
